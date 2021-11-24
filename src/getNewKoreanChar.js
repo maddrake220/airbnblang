@@ -1,7 +1,7 @@
 import { F, S, T } from "./arrays";
 
 export const getNewF = (el) => {
-  let r = Math.floor(Math.random() * 3);
+  const r = Math.floor(Math.random() * 3);
   if (el === "ㄱ" || el === "ㄲ" || el === "ㅋ") {
     return r === 0 ? 0 : r === 1 ? 1 : 15;
   } else if (el === "ㄷ" || el === "ㅌ" || el === "ㄸ") {
@@ -18,7 +18,7 @@ export const getNewF = (el) => {
 };
 
 export const getNewS = (el) => {
-  let r = Math.floor(Math.random() * 2);
+  const r = Math.floor(Math.random() * 2);
   if (el === "ㅏ" || el === "ㅑ") {
     return r === 0 ? 0 : 2;
   } else if (el === "ㅐ" || el === "ㅒ") {
@@ -41,16 +41,16 @@ export const getNewS = (el) => {
 };
 export const getNewT = (el) => {
   if (el === "ㄱ" || el === "ㄲ" || el === "ㄳ" || el === "ㄺ" || el === "ㅋ") {
-    let r = Math.floor(Math.random() * 5);
+    const r = Math.floor(Math.random() * 5);
     return r === 0 ? 1 : r === 1 ? 2 : r === 2 ? 3 : r === 3 ? 24 : 9;
   } else if (el === "ㄴ" || el === "ㄵ" || el === "ㄶ") {
-    let r = Math.floor(Math.random() * 3);
+    const r = Math.floor(Math.random() * 3);
     return r === 0 ? 4 : r === 1 ? 5 : 6;
   } else if (el === "ㄼ" || el === "ㄿ" || el === "ㅂ" || el === "ㅄ") {
-    let r = Math.floor(Math.random() * 4);
+    const r = Math.floor(Math.random() * 4);
     return r === 0 ? 11 : r === 1 ? 14 : r === 2 ? 17 : 18;
   } else if (el === "ㅁ" || el === "ㄻ") {
-    let r = Math.floor(Math.random() * 2);
+    const r = Math.floor(Math.random() * 2);
     return r === 0 ? 16 : 10;
   } else if (
     el === "ㄷ" ||
@@ -64,7 +64,7 @@ export const getNewT = (el) => {
     el === "ㅎ" ||
     el === "ㅀ"
   ) {
-    let r = Math.floor(Math.random() * 9);
+    const r = Math.floor(Math.random() * 9);
     return r === 0
       ? 7
       : r === 1
@@ -85,13 +85,9 @@ export const getNewT = (el) => {
       ? 15
       : 27;
   } else if (el === "") {
-    let r1 = Math.floor(Math.random() * 3);
+    const r1 = Math.floor(Math.random() * 3);
     let r;
-    if (r1 === 0) {
-      r = Math.floor(Math.random() * 27);
-    } else {
-      r = 0;
-    }
+    r = r1 === 0 ? Math.floor(Math.random() * 27) : 0;
     return r;
   } else {
     return T.indexOf(el);

@@ -10,17 +10,16 @@ const textarea_output = document.getElementById("textarea_output");
 button.addEventListener("click", buttonHandler);
 function buttonHandler(e) {
   const entireSentence = textarea_input.value.toString().trim().split("");
-  let answer = "";
+  const answer = "";
   for (let i in entireSentence) {
-    console.log(entireSentence);
     if (entireSentence[i] === " ") {
       answer += " ";
     } else if (entireSentence[i].charCodeAt(0) < 44032) {
       answer += entireSentence[i];
     } else {
-      let str = getConstantVowel(entireSentence[i]);
+      const str = getConstantVowel(entireSentence[i]);
       let top, middle, bottom;
-      let random = Math.floor(Math.random() * 2);
+      const random = Math.floor(Math.random() * 2);
       if (random === 0) {
         top = getNewF(str.f);
         middle = getNewS(str.s);
