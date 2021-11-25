@@ -10,7 +10,7 @@ const textarea_output = document.getElementById("textarea_output");
 button.addEventListener("click", buttonHandler);
 function buttonHandler(e) {
   const entireSentence = textarea_input.value.toString().trim().split("");
-  const answer = "";
+  let answer = "";
   for (let i in entireSentence) {
     if (entireSentence[i] === " ") {
       answer += " ";
